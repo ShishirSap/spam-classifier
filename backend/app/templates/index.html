@@ -11,7 +11,9 @@
         <input type="submit" value="Predict">
     </form>
     {% if prediction %}
-        <h2>Prediction: {{ prediction }}</h2>
+        <h2>Prediction: spam</h2>
+        {% else %}
+        <h2>Prediction: ham</h2>
     {% endif %}
 </body>
 </html>
