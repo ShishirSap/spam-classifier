@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Detection</title>
+</head>
+<body>
+    <h1>Spam Detection</h1>
+    <form action="/" method="post">
+        {% csrf_token %}
+        <input type="text" name="text" placeholder="Enter a message" required>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
